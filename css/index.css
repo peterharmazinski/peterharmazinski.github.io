@@ -3,22 +3,6 @@ body, html {
     height: 100%;
   }
   
-  .bg { 
-    /* The image used */
-    /* background-image: url("../img/jessy-smith-534048-unsplash.jpg"); */
-
-    background: linear-gradient( rgba(0,0,0,0.7), rgba(0, 0, 0, 0.7) ),url(../img/jessy-smith-534048-unsplash.jpg) no-repeat center center fixed;
-  
-    /* Full height */
-    height: 100%; 
-
-    -webkit-filter: brightness(150%); 
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 
   /* Prevent elements from extending beyond viewport */
 img, embed, object, video {
@@ -33,4 +17,55 @@ nav a, button {
 
 #logo {
     width: 300px;
+}
+
+.background--gunmetal {
+    background: #2C363F;
+}
+.background--gray {
+    background: #363537;
+}
+.background--off-white {
+    background: #F4FAFF;
+}
+.background--sunset-orange {
+    background: #FF5A5A;
+}
+
+.full-screen { height: 100vh;}
+.full-screen-first { height: 90vh; }
+.half-width {
+    width: 50%;
+}
+
+.position--relative {
+    position: relative;
+}
+
+.position--absolute {
+    position: absolute;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.text--center {
+    text-align: center;
+}
+
+.text-color--sunset-orange {
+    color: #FF5A5A;
+}
+
+.text-size--0 {
+    font-size: 0;
+}
+
+.text-size--2 {
+    font-size: 2em;
+}
+
+.display--inline-block {
+    display: inline-block;
 }
