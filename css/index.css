@@ -1,4 +1,36 @@
-body {
-    background-image: url("paper.gif");
-    background-color: #cccccc;
+
+body, html {
+    height: 100%;
+  }
+  
+  .bg { 
+    /* The image used */
+    /* background-image: url("../img/jessy-smith-534048-unsplash.jpg"); */
+
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ),url(../img/jessy-smith-534048-unsplash.jpg) no-repeat center center fixed;
+  
+    /* Full height */
+    height: 100%; 
+
+    -webkit-filter: brightness(150%); 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* Prevent elements from extending beyond viewport */
+img, embed, object, video {
+    max-width: 100%;
+}
+
+/* Ensure touch targets can be easily pressed with a finger */
+nav a, button {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+#logo {
+    width: 300px;
 }
