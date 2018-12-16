@@ -89,7 +89,7 @@ nav a, button {
 }
 
 /* iPhone landscape range */
-@media (min-width:321px) and (max-width:480px) {
+@media (max-width:480px) {
     .hero {
         font-size: 2rem;
         line-height: 100%;
