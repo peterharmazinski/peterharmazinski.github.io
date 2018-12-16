@@ -73,3 +73,39 @@ nav a, button {
 .display--inline-block {
     display: inline-block;
 }
+
+.hero {
+    font-size: 4vw;
+    line-height: 100%;
+}
+
+.paragraph-text {
+    font-size: 1.5vw;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    
+}
+
+/* iPhone landscape range */
+@media (min-width:321px) and (max-width:480px) {
+    .hero {
+        font-size: 2rem;
+        line-height: 100%;
+    }
+
+    .paragraph-text {
+        font-size: 1rem;
+    }
+}
+
+/* larger than iPhone landscape, an in the iPad portrait range */
+@media (min-width:481px) and (max-width:768px) {
+    
+}
+
+/* bigger than iPad portrait  */
+@media (min-width:769px) {
+    
+}
