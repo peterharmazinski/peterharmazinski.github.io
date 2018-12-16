@@ -77,10 +77,13 @@ nav a, button {
 .hero {
     font-size: 4vw;
     line-height: 100%;
+    font-family: Lato, sans-serif;
+    font-weight: 600;
 }
 
 .paragraph-text {
-    font-size: 1.5vw;
+    font-size: 1.25vw;
+    font-family: 'BioRhyme', serif;
 }
 
 /* Smartphones (portrait) ----------- */
