@@ -50,6 +50,10 @@ nav a, button {
     bottom: 0;
 }
 
+.middle {
+    top: 30%;
+}
+
 .text--center {
     text-align: center;
 }
