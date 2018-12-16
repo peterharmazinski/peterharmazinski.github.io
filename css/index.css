@@ -2,6 +2,10 @@
 body, html {
     height: 100%;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
   
 
   /* Prevent elements from extending beyond viewport */
@@ -59,7 +63,7 @@ nav a, button {
 }
 
 .text-color--sunset-orange {
-    color: #FF5A5A;
+    color: #FF5A5A !important;
 }
 
 .text-size--0 {
@@ -83,7 +87,7 @@ nav a, button {
 
 .paragraph-text {
     font-size: 1.25vw;
-    font-family: 'BioRhyme', serif;
+    font-family: 'Merriweather', serif;
 }
 
 /* Smartphones (portrait) ----------- */
@@ -101,11 +105,26 @@ nav a, button {
     .paragraph-text {
         font-size: 1rem;
     }
+
+    .middle {
+        top: 20%;
+    }
 }
 
 /* larger than iPhone landscape, an in the iPad portrait range */
 @media (min-width:481px) and (max-width:768px) {
-    
+    .hero {
+        font-size: 3rem;
+        line-height: 100%;
+    }
+
+    .paragraph-text {
+        font-size: 1.5rem;
+    }
+
+    .middle {
+        top: 20%;
+    }
 }
 
 /* bigger than iPad portrait  */
