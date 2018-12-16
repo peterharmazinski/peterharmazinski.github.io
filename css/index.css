@@ -10,7 +10,7 @@ body, html {
 
   /* Prevent elements from extending beyond viewport */
 img, embed, object, video {
-    max-width: 100%;
+    max-width: 100vw;
 }
 
 /* Ensure touch targets can be easily pressed with a finger */
