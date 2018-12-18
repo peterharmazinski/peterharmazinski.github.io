@@ -19,8 +19,12 @@ nav a, button {
     min-height: 48px;
 }
 
+.nav-link:hover {
+    border-bottom: solid 2px;
+}
+
 #logo {
-    width: 300px;
+    width: 50%;
 }
 
 .background--gunmetal {
@@ -83,6 +87,10 @@ nav a, button {
     line-height: 100%;
     font-family: Lato, sans-serif;
     font-weight: 600;
+}
+
+.text--futura {
+    font-family: Lato, sans-serif;
 }
 
 .paragraph-text {
