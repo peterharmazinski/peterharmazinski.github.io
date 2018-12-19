@@ -140,12 +140,12 @@ nav a, button {
     
 }
 
-@keyframes fallin {
+@keyframes fallIn {
     0% {
         transform: translate(0px, -50px);
     }
-    60% {
-        transform: translate(0px, -30pxpx);
+    50% {
+        transform: translate(0px, 1px);
     }
     100% {
         transform: translate(0px, 0px);
@@ -154,20 +154,24 @@ nav a, button {
 
 .nav-item:first-child {
     animation-duration: 1s;
-    animation-name: fallin;
+    animation-name: fallIn;
 }
 
 .nav-item:nth-child(2) {
     animation-duration: 1.5s;
-    animation-name: fallin;
+    animation-name: fallIn;
 }
 
 .nav-item:nth-child(3) {
     animation-duration: 2s;
-    animation-name: fallin;
+    animation-name: fallIn;
 }
 
 .nav-item:nth-child(4) {
     animation-duration: 2.5s;
-    animation-name: fallin;
+    animation-name: fallIn;
 }
+
+#navbar {
+  transition: top 0.3s;
+  }
