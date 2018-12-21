@@ -2,6 +2,7 @@
     --sunset-orange: #FF5A5A;
     --white: #fff;
     --gunmetal: #2C363F;
+    --full-width-without-scrollbar: calc(100vw - (100vw - 100%));
 }
 
 * {
@@ -33,9 +34,10 @@ nav a, button {
 nav {
     display: flex;
     position: fixed;
-    width: 100vw;
+    width: var(--full-width-without-scrollbar);
+    z-index: 10;
     background: var(--gunmetal);
-    transition: top 1s;
+    transition: all 0.5;
 }
 
 nav div {
@@ -50,6 +52,7 @@ nav div a {
     justify-content: center;
     color: var(--sunset-orange);
     font-style: normal;
+    text-decoration: none;
 }
 
 nav div a:hover {
@@ -71,8 +74,41 @@ nav div a:hover {
 }
 
 #logo {
-    width: 200px;
     height: 45px;
+    animation-duration: 1s;
+    animation-name: fallIn;
+}
+
+@keyframes fallIn {
+    0% {
+        transform: translate(0px, -50px);
+    }
+    50% {
+        transform: translate(0px, 1px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+nav div a:first-child {
+    animation-duration: 1s;
+    animation-name: fallIn;
+}
+
+nav div a:nth-child(2) {
+    animation-duration: 1.5s;
+    animation-name: fallIn;
+}
+
+nav div a:nth-child(3) {
+    animation-duration: 2s;
+    animation-name: fallIn;
+}
+
+nav div a:nth-child(4) {
+    animation-duration: 2.5s;
+    animation-name: fallIn;
 }
 
 @media all and (max-width: 600px) {
@@ -168,37 +204,7 @@ section:not(#timeline) {
 
 @media (min-width:769px) {}
 
-@keyframes fallIn {
-    0% {
-        transform: translate(0px, -50px);
-    }
-    50% {
-        transform: translate(0px, 1px);
-    }
-    100% {
-        transform: translate(0px, 0px);
-    }
-}
 
-.nav-item:first-child {
-    animation-duration: 1s;
-    animation-name: fallIn;
-}
-
-.nav-item:nth-child(2) {
-    animation-duration: 1.5s;
-    animation-name: fallIn;
-}
-
-.nav-item:nth-child(3) {
-    animation-duration: 2s;
-    animation-name: fallIn;
-}
-
-.nav-item:nth-child(4) {
-    animation-duration: 2.5s;
-    animation-name: fallIn;
-}
 
 
 
@@ -254,7 +260,7 @@ body {
     position: absolute;
     width: 25px;
     height: 25px;
-    right: -13px;
+    right: -17px;
     background-color: white;
     border: 4px solid #FF5A5A;
     top: 15px;
@@ -307,7 +313,7 @@ body {
 /* Fix the circle for containers on the right side */
 
 .right::after {
-    left: -13px;
+    left: -17px;
 }
 
 /* The actual content */
@@ -341,7 +347,7 @@ body {
     }
     /* Make sure all circles are at the same spot */
     .left::after, .right::after {
-        left: 18px;
+        left: 15px;
     }
     /* Make all right containers behave like the left ones */
     .right {

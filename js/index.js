@@ -1,11 +1,10 @@
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-70px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+window.onscroll = function(e) { 
+  var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  var header = document.querySelector('header');
 
+  scrollY <= this.lastScroll 
+    ? header.style.visibility = 'visible'
+    : header.style.visibility = 'hidden'; 
+
+  this.lastScroll = scrollY ;
+}
