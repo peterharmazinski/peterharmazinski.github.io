@@ -12,76 +12,27 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
         crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://gitcdn.link/repo/peteskii/common/master/static/css/common.css" rel="stylesheet">
     <link href="css/index.css" type="text/css" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-        crossorigin="anonymous"></script>
 </head>
 
-<body class="bg">
+<body>
     <header>
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top background--gunmetal">
-            <div class="d-flex flex-grow-1">
-                <a class="navbar-brand d-lg-inline-block" href="#">
-                    <img id="logo" src="img/logo3.png" alt="Logo for page. A code icon with text: Peter Harmazinski, Web Developer and Designer">
-                </a>
-                <div class="w-100 text-right">
-                    <button class="navbar-toggler" style="border: none;" type="button" data-toggle="collapse"
-                        data-target="#myNavbar">
-                        <i class="fas fa-bars text-color--sunset-orange"></i>
-                    </button>
-                </div>
+        <nav>
+            <div id="nav-left">
+                <img id="logo" src="img/logo3.png" alt="Logo for page. A code icon with text: Peter Harmazinski, Web Developer and Designer">
             </div>
-            <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
-                <ul id="nav-items-container" class="navbar-nav ml-auto flex-nowrap">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link m-2 menu-item text-color--sunset-orange text--futura">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link m-2 menu-item text-color--sunset-orange text--futura">PORTFOLIO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link m-2 menu-item text-color--sunset-orange text--futura">BLOG</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link m-2 menu-item text-color--sunset-orange text--futura">CONTACT</a>
-                    </li>
-                </ul>
+            
+            <div id="nav-right">
+                <a href="#">ABOUT</a>
+                <a href="#">PORTFOLIO</a>
+                <a href="#">CONTACT</a>
             </div>
         </nav>
     </header>
-
     <main>
-        <section class="full-screen background--gunmetal position--relative">
-            <div class="container-fluid position--absolute middle">
-                <div class="row mb-3">
-                    <div class="col-2 col-sm-2 col-md-2 col-lg-2"></div>
-                    <div class="col-8 col-sm-8 col-md-8 col-lg-8" style="color:white;">
-                        <h1 class="hero">Let's create something
-                            <p class="text-color--sunset-orange hero">beautiful<span style="color:white;">.</span>
-                                accessible<span style="color:white;">.</span> efficient<span style="color:white;">.</span></p>
-                        </h1>
-                    </div>
-                    <div class="col-2 col-sm-2 col-md-2 col-lg-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-2 col-sm-2 col-md-2 col-lg-2"></div>
-                    <div class="col-8 col-sm-8 col-md-8 col-lg-8 paragraph-text" style="color:white;">
-                        <p>I'm a full-stack developer with a focus on front-end development. I'm passionate about making a great user experience.</p>
-                    </div>
-                    <div class="col-2 col-sm-2 col-md-2 col-lg-2"></div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-
+        <section id="hero">
+            <h1>Let's create something <br><em>beautiful</em>. <em>accessible</em>. <em>efficient</em>.</p></h1>
+            <p>I'm a full-stack developer with a focus on front-end development. I'm passionate about creating seamless user experiences.</p>
         </section>
 
         <section id="timeline" class="timeline">
