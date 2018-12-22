@@ -207,6 +207,12 @@ section:not(#timeline) {
     border: solid 6px var(--gunmetal);
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+#skills div {
+    margin: 0 5%;
 }
 
 #skills div h1 {
