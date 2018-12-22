@@ -24,14 +24,14 @@ img, embed, object, video {
 
 /* Ensure touch targets can be easily pressed with a finger */
 
-nav a, button {
+#navbar a, button {
     min-width: 48px;
     min-height: 48px;
 }
 
 /*NAVBAR*/
 
-nav {
+#navbar {
     display: flex;
     position: fixed;
     width: var(--full-width-without-scrollbar);
@@ -40,12 +40,12 @@ nav {
     transition: all 0.5;
 }
 
-nav div {
+#navbar div {
     display: inline-flex;
     flex: 1;
 }
 
-nav div a {
+#navbar div a {
     display: flex;
     margin: 0 calc(100% / 30);
     flex-direction: column;
@@ -56,7 +56,7 @@ nav div a {
     font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
 }
 
-nav div a:hover {
+#navbar div a:hover {
     border-bottom: solid 2px;
 }
 
@@ -80,6 +80,49 @@ nav div a:hover {
     animation-name: fallIn;
 }
 
+#social-media {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
 @keyframes fallIn {
     0% {
         transform: translate(0px, -50px);
@@ -92,28 +135,28 @@ nav div a:hover {
     }
 }
 
-nav div a:first-child {
+#navbar div a:first-child {
     animation-duration: 1s;
     animation-name: fallIn;
 }
 
-nav div a:nth-child(2) {
+#navbar div a:nth-child(2) {
     animation-duration: 1.5s;
     animation-name: fallIn;
 }
 
-nav div a:nth-child(3) {
+#navbar div a:nth-child(3) {
     animation-duration: 2s;
     animation-name: fallIn;
 }
 
-nav div a:nth-child(4) {
+#navbar div a:nth-child(4) {
     animation-duration: 2.5s;
     animation-name: fallIn;
 }
 
 @media all and (max-width: 600px) {
-    nav {
+    #navbar {
         flex-wrap: wrap;
         flex-direction: column;
     }
@@ -135,11 +178,12 @@ main {
     /* Reserve space for header plus some extra space for sneak peeking. */
     scroll-padding-top: 15vh;
     overflow-y: scroll;
-  }
-  section {
+}
+
+section {
     /* Snap align start. */
     scroll-snap-align: start;
-  }
+}
 
 /*HERO*/
 
@@ -221,6 +265,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     min-height: 100vh;
+    color: var(--gunmetal);
 }
 
 #skills div {
@@ -229,6 +274,10 @@ main {
 
 #skills div h1 {
     text-align: center;
+}
+
+.svg-text-color--gunmetal {
+    fill: var(--gunmetal);
 }
 
 .circular-chart {
@@ -257,6 +306,10 @@ main {
 
 /* Set a background color */
 
+#timeline {
+    min-height: 100vh;
+}
+
 #timeline h2, #timeline p {
     color: white;
 }
@@ -272,6 +325,7 @@ body {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
+
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -396,4 +450,14 @@ body {
     .right {
         left: 0%;
     }
+}
+
+/*PORTFOLIO*/
+#portfolio {
+    min-height: 100vh;
+    background: var(--gunmetal);
+}
+
+#contact iframe document html body {
+    background: var(--gunmetal);
 }
