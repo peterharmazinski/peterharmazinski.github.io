@@ -69,6 +69,10 @@ img, embed, object, video {
     justify-content: flex-end;
 }
 
+#nav-right a {
+    text-align: center;
+}
+
 #nav-center {
     align-self: center;
     display: flex
