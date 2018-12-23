@@ -177,6 +177,10 @@ section:not(#timeline) {
     display: flex;
 }
 
+section:not(#hero) {
+    padding-top: 50px;
+}
+
 main {
     scroll-snap-type: y proximity;
     /* Reserve space for header plus some extra space for sneak peeking. */
@@ -458,6 +462,7 @@ body {
 
 /*PORTFOLIO*/
 #portfolio {
+    display: grid;
     min-height: 100vh;
     background: var(--gunmetal);
 }
