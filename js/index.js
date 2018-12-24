@@ -1,52 +1,47 @@
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+    e.preventDefault();
 
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-      });
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
   });
 });
 
-var hero = document.querySelector('#hero');
-window.addEventListener('scroll', function (event) {
-	if (isInViewport(hero)) {
-		document.querySelector('#intro-nav').style.borderBottom = "solid 2px"
-	}
-}, false);
+underlineNavItemOnScroll("#hero", "#intro-nav");
+underlineNavItemOnScroll("#skills", "#skills-nav");
+underlineNavItemOnScroll("#timeline", "#timeline-nav");
+underlineNavItemOnScroll("#portfolio", "#portfolio-nav");
 
-var skills = document.querySelector('#skills');
-window.addEventListener('scroll', function (event) {
-	if (isInViewport(skills)) {
-    document.querySelector('#skills-nav').style.borderBottom = "solid 2px"	}
-}, false);
+function underlineNavItemOnScroll(sectionID, navID) {
+  var element = document.querySelector(sectionID);
+  window.addEventListener('scroll', function (event) {
+    if (isInViewport(element)) {
+      document.querySelector(navID).style.borderBottom = "solid 2px"
+    } else {
+      document.querySelector(navID).style.borderBottom = "none";
+    }
+  }, false);
+}
 
-var timeline = document.querySelector('#timeline');
-window.addEventListener('scroll', function (event) {
-	if (isInViewport(timeline)) {
-    document.querySelector('#timeline-nav').style.borderBottom = "solid 2px"	}
-}, false);
+function isInViewport(element) {
+  // source: https://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+  var top = element.offsetTop;
+  var left = element.offsetLeft;
+  var width = element.offsetWidth;
+  var height = element.offsetHeight;
 
-var portfolio = document.querySelector('#portfolio');
-window.addEventListener('scroll', function (event) {
-	if (isInViewport(portfolio)) {
-    document.querySelector('#portfolio-nav').style.borderBottom = "solid 2px"	}
-}, false);
-
-function isInViewport (el) {
-
-  //special bonus for those using jQuery
-  if (typeof jQuery === "function" && el instanceof jQuery) {
-      el = el[0];
+  while (element.offsetParent) {
+    element = element.offsetParent;
+    top += element.offsetTop;
+    left += element.offsetLeft;
   }
 
-  var rect = el.getBoundingClientRect();
-
   return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+    top < (window.pageYOffset + window.innerHeight) &&
+    left < (window.pageXOffset + window.innerWidth) &&
+    (top + height) > window.pageYOffset &&
+    (left + width) > window.pageXOffset
   );
 }

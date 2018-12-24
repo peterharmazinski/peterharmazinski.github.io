@@ -335,7 +335,11 @@ section {
     min-height: 100vh;
 }
 
-#timeline h2, #timeline p {
+#timeline h2 {
+    color: var(--sunset-orange);
+}
+
+#timeline h3, #timeline p {
     color: white;
 }
 
