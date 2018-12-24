@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body, html {
     height: 100%;
     width: 100vw;
@@ -23,6 +27,15 @@ img, embed, object, video {
 }
 
 /* Ensure touch targets can be easily pressed with a finger */
+
+.hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
 
 #navbar a, button {
     min-width: 48px;
@@ -91,32 +104,36 @@ img, embed, object, video {
 }
 
 /* Style all font awesome icons */
+
 .fa {
     padding: 20px;
     font-size: 30px;
     width: 50px;
     text-align: center;
     text-decoration: none;
-  }
-  
-  /* Add a hover effect if you want */
-  .fa:hover {
+}
+
+/* Add a hover effect if you want */
+
+.fa:hover {
     opacity: 0.7;
-  }
-  
-  /* Set a specific color for each brand */
-  
-  /* Facebook */
-  .fa-facebook {
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+
+.fa-facebook {
     background: #3B5998;
     color: white;
-  }
-  
-  /* Twitter */
-  .fa-twitter {
+}
+
+/* Twitter */
+
+.fa-twitter {
     background: #55ACEE;
     color: white;
-  }
+}
 
 .fa {
     padding: 20px;
@@ -125,7 +142,7 @@ img, embed, object, video {
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-  }
+}
 
 @keyframes fallIn {
     0% {
@@ -185,7 +202,7 @@ main {
     scroll-snap-type: y proximity;
     /* Reserve space for header plus some extra space for sneak peeking. */
     scroll-padding-top: 15vh;
-    overflow-y: scroll;
+    width: 100vw;
 }
 
 section {
@@ -333,7 +350,6 @@ body {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -461,6 +477,7 @@ body {
 }
 
 /*PORTFOLIO*/
+
 #portfolio {
     display: grid;
     min-height: 100vh;

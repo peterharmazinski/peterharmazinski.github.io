@@ -26,18 +26,18 @@
     <link href="css/index.css" type="text/css" rel="stylesheet">
 </head>
 
-<body id="top">
-    <header>
+<body>
+    <header id="top">
         <nav id="navbar">
             <div id="nav-left">
                 <img id="logo" src="img/logo3.png" alt="Logo for page. A code icon with text: Peter Harmazinski, Web Developer and Designer">
             </div>
 
             <div id="nav-right">
-                <a href="#top">INTRO</a>
-                <a href="#skills">SKILLS</a>
-                <a href="#timeline">TIMELINE</a>
-                <a href="#portfolio">PORTFOLIO</a>
+                <a id="intro-nav" href="#top">INTRO</a>
+                <a id="skills-nav" href="#skills">SKILLS</a>
+                <a id="timeline-nav" href="#timeline">TIMELINE</a>
+                <a id="portfolio-nav" href="#portfolio">PORTFOLIO</a>
             </div>
         </nav>
         <nav id="social-media">
@@ -55,8 +55,8 @@
 
         <section id="skills">
             <div id="scroll-to-skills">
-                <h1>JavaScript</h1>
-                <tit></tit>
+                <h1 class="hidden">Skills</h1>
+                <h2>JavaScript</h2>
                 <svg aria-labelledby viewBox="0 0 36 36" class="circular-chart">
                     <path class="circle" stroke-dasharray="30, 100" d="M18 2.0845
                             a 15.9155 15.9155 0 0 1 0 31.831
@@ -68,7 +68,7 @@
                 </svg>
             </div>
             <div>
-                <h1>Java</h1>
+                <h2>Java</h2>
                 <svg viewBox="0 0 36 36" class="circular-chart">
                     <path class="circle" stroke-dasharray="20, 100" d="M18 2.0845
                                 a 15.9155 15.9155 0 0 1 0 31.831
@@ -80,7 +80,7 @@
                 </svg>
             </div>
             <div>
-                <h1>Data Visualization</h1>
+                <h2>Data Visualization</h2>
                 <svg viewBox="0 0 36 36" class="circular-chart">
                     <path class="circle" stroke-dasharray="40, 100" d="M18 2.0845
                                 a 15.9155 15.9155 0 0 1 0 31.831
@@ -92,7 +92,7 @@
                 </svg>
             </div>
             <div>
-                <h1>SQL</h1>
+                <h2>SQL</h2>
                 <svg viewBox="0 0 36 36" class="circular-chart">
                     <path class="circle" stroke-dasharray="30, 100" d="M18 2.0845
                                     a 15.9155 15.9155 0 0 1 0 31.831
@@ -104,7 +104,7 @@
                 </svg>
             </div>
             <div>
-                <h1>Cassandra</h1>
+                <h2>Cassandra</h2>
                 <svg viewBox="0 0 36 36" class="circular-chart">
                     <path class="circle" stroke-dasharray="10, 100" d="M18 2.0845
                                         a 15.9155 15.9155 0 0 1 0 31.831
@@ -116,7 +116,7 @@
                 </svg>
             </div>
             <div>
-                <h1>Automation</h1>
+                <h2>Automation</h2>
                 <svg viewBox="0 0 36 36" class="circular-chart">
                     <path class="circle" stroke-dasharray="40, 100" d="M18 2.0845
                                             a 15.9155 15.9155 0 0 1 0 31.831
@@ -130,6 +130,7 @@
         </section>
 
         <section id="timeline" class="timeline">
+            <h1 class="hidden">Timeline</h1>
             <div class="timeline-container left">
                 <div class="content">
                     <h2>2019</h2>
@@ -157,7 +158,7 @@
         </section>
 
         <section id="portfolio">
-
+                <h1 class="hidden">Portfolio</h1>
         </section>
     </main>
     <script src="js/index.js"></script>
