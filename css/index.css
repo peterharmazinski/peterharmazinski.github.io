@@ -20,6 +20,17 @@ body, html {
     padding: 0px;
 }
 
+h2, h3, h4, h5, h6 {
+    font-family: Lato, sans-serif;
+}
+
+p {
+    font-size: 1vw;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 0.02em;
+    line-height: 1.4em;
+}
+
 /* Prevent elements from extending beyond viewport */
 
 img, embed, object, video {
@@ -233,6 +244,113 @@ section {
     font-style: normal;
 }
 
+/*Animation only looks correct on larger screen*/
+@media only screen and (min-width: 1260px) {
+    #hero h1 {
+        overflow: hidden;
+        /* Ensures the content is not revealed until the animation */
+        white-space: nowrap;
+        /* Keeps the content on a single line */
+        margin: 0 auto;
+        /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em;
+        /* Adjust as needed */
+        animation: typing 3.25s steps(40, end)
+    }
+    /* The typing effect */
+    @keyframes typing {
+        from {
+            width: 0
+        }
+        to {
+            width: 100%
+        }
+    }
+
+    #hero h1 em:nth-child(2), #hero h1 i:nth-child(3) {
+        -webkit-animation: fadein 3.5s;
+        /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 3.5s;
+        /* Firefox < 16 */
+        -ms-animation: fadein 3.5s;
+        /* Internet Explorer */
+        -o-animation: fadein 3.5s;
+        /* Opera < 12.1 */
+        animation: fadein 3.5s;
+    }
+    #hero h1 em:nth-child(4), #hero h1 i:nth-child(5) {
+        -webkit-animation: fadein 5s;
+        /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 5s;
+        /* Firefox < 16 */
+        -ms-animation: fadein 5s;
+        /* Internet Explorer */
+        -o-animation: fadein 5s;
+        /* Opera < 12.1 */
+        animation: fadein 5s;
+    }
+    #hero h1 em:nth-child(6), #hero h1 i:nth-child(7) {
+        -webkit-animation: fadein 6s;
+        /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 6s;
+        /* Firefox < 16 */
+        -ms-animation: fadein 6s;
+        /* Internet Explorer */
+        -o-animation: fadein 6s;
+        /* Opera < 12.1 */
+        animation: fadein 6s;
+    }
+    #hero p {
+        -webkit-animation: fadein 7s;
+        /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 7s;
+        /* Firefox < 16 */
+        -ms-animation: fadein 7s;
+        /* Internet Explorer */
+        -o-animation: fadein 7s;
+        /* Opera < 12.1 */
+        animation: fadein 7s;
+    }
+    @keyframes fadein {
+        0% {
+            opacity: 0;
+        }
+        90% {
+            opacity: 0;
+        }
+        91% {
+            opacity: .1;
+        }
+        92% {
+            opacity: .2;
+        }
+        93% {
+            opacity: .3;
+        }
+        94% {
+            opacity: .4;
+        }
+        95% {
+            opacity: .5;
+        }
+        95% {
+            opacity: .6;
+        }
+        95% {
+            opacity: .7;
+        }
+        95% {
+            opacity: .8;
+        }
+        95% {
+            opacity: .9;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
 #hero h1 p {
     display: flex;
     flex-wrap: wrap;
@@ -241,11 +359,6 @@ section {
 
 .text--futura {
     font-family: Lato, sans-serif;
-}
-
-.paragraph-text {
-    font-size: 1.25vw;
-    font-family: 'Merriweather', serif;
 }
 
 /* Smartphones (portrait) ----------- */
@@ -297,7 +410,7 @@ section {
     margin: 0 5%;
 }
 
-#skills div h1 {
+#skills div h2 {
     text-align: center;
 }
 
