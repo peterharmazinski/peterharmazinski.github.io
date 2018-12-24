@@ -1,4 +1,3 @@
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -9,20 +8,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-underlineNavItemOnScroll("#hero", "#intro-nav");
-underlineNavItemOnScroll("#skills", "#skills-nav");
-underlineNavItemOnScroll("#timeline", "#timeline-nav");
-underlineNavItemOnScroll("#portfolio", "#portfolio-nav");
+(function checkWhichNavItemInViewPort() {
+  underlineNavItem('#hero', '#intro-nav');
+  underlineNavItem('#skills', '#skills-nav');
+  underlineNavItem('#timeline', '#timeline-nav');
+  underlineNavItem('#portfolio', '#portfolio-nav');
+})();
 
-function underlineNavItemOnScroll(sectionID, navID) {
+function underlineNavItem(sectionID, navID) {
   var element = document.querySelector(sectionID);
+  underlineNavItemIfInView(element, navID);
+  underlineNavItemOnScroll(element, navID);
+}
+
+function underlineNavItemOnScroll(element, navID) {
   window.addEventListener('scroll', function (event) {
-    if (isInViewport(element)) {
-      document.querySelector(navID).style.borderBottom = "solid 2px"
-    } else {
-      document.querySelector(navID).style.borderBottom = "none";
-    }
+    underlineNavItemIfInView(element, navID);
   }, false);
+}
+
+function underlineNavItemIfInView(element, navID) {
+  if (isInViewport(element)) {
+    document.querySelector(navID).style.borderBottom = 'solid 2px';
+  } else {
+    document.querySelector(navID).style.borderBottom = "none";
+  }
 }
 
 function isInViewport(element) {
