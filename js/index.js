@@ -1,13 +1,3 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
-
 (function checkWhichNavItemInViewPort() {
   underlineNavItem('#hero', '#intro-nav');
   underlineNavItem('#skills', '#skills-nav');
