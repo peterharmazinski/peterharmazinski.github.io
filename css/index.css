@@ -588,8 +588,8 @@ body {
     grid-template-rows: repeat(3, auto);
     min-height: 100vh;
     background: var(--gunmetal);
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 #portfolio div {
@@ -598,6 +598,7 @@ body {
     align-items: center;
     background: white;
     height: 400px;
+    max-width: 80vw;
 }
 
 #portfolio h2 {
