@@ -63,6 +63,7 @@ img, embed, object, video {
     z-index: 10;
     background: var(--gunmetal);
     transition: all 0.5;
+    max-width: 100vw;
 }
 
 #navbar div {
