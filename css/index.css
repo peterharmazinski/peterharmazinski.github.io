@@ -293,7 +293,6 @@ main {
     font-family: Lato, sans-serif;
     color: var(--white);
     text-decoration: none;
-    border-radius: 50px;
     padding: 10px;
     font-size: 2em;
 }
@@ -600,7 +599,6 @@ main {
     padding: 20px 30px;
     background-color: var(--white);
     position: relative;
-    border-radius: 6px;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -654,12 +652,14 @@ main {
     height: 400px;
     width: 100%;
     max-width: 80vw;
-    -webkit-clip-path: polygon(73% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
-clip-path: polygon(73% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
+}
+
+#portfolio article:hover h2 {
+    color: var(--sunset-orange);
 }
 
 #portfolio h2 {
-    color: var(--sunset-orange);
+    color: var(--white);
     text-align: center;
     margin: 0 20%;
 }
