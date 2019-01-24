@@ -1,8 +1,28 @@
 :root {
     --sunset-orange: #FF5A5A;
-    --white: #fff;
+    --sunset-orange-dark: rgb(255, 90, 90, 0.8);
+    --white: #fafafa;
     --gunmetal: #2C363F;
     --full-width-without-scrollbar: calc(100vw - (100vw - 100%));
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--sunset-orange);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--sunset-orange-dark);
 }
 
 * {
@@ -19,15 +39,20 @@ body, html {
     width: 100vw;
     margin: 0px;
     padding: 0px;
+    background-color: var(--white);
+    font-family: 'Merriweather', serif;
 }
 
 h2, h3, h4, h5, h6 {
     font-family: Lato, sans-serif;
 }
 
+h2 {
+    font-size: 2em;
+}
+
 p {
     font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
-    font-family: 'Merriweather', serif;
     letter-spacing: 0.02em;
     line-height: 1.4em;
 }
@@ -41,15 +66,16 @@ img, embed, object, video {
 /* Ensure touch targets can be easily pressed with a finger */
 
 .hidden {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+    position: absolute !important;
+    left: -10000px !important;
+    top: auto !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
 }
 
 #navbar a, button {
+    font-family: Lato, sans-serif;
     min-width: 48px;
     min-height: 48px;
 }
@@ -61,7 +87,7 @@ img, embed, object, video {
     position: fixed;
     width: var(--full-width-without-scrollbar);
     z-index: 10;
-    background: var(--gunmetal);
+    background: transparent;
     transition: all 0.5;
     max-width: 100vw;
 }
@@ -71,7 +97,7 @@ img, embed, object, video {
     flex: 1;
 }
 
-#navbar div a {
+#nav-right a {
     display: flex;
     margin: 0 calc(100% / 30);
     flex-direction: column;
@@ -82,13 +108,20 @@ img, embed, object, video {
     font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
 }
 
-#navbar div a:hover {
+#nav-right div a:hover {
     border-bottom: solid 2px;
 }
 
 #nav-left {
     align-self: flex-start;
     flex: 1;
+    padding-top: 10px;
+    animation-duration: 1s;
+    animation-name: fallIn;
+}
+
+#nav-left a {
+    text-decoration: none;
 }
 
 #nav-right {
@@ -105,9 +138,16 @@ img, embed, object, video {
 }
 
 #logo {
-    height: 45px;
-    animation-duration: 1s;
-    animation-name: fallIn;
+    font-family: 'UnifrakturMaguntia', cursive;
+    color: var(--sunset-orange);
+    font-size: 2.5em;
+    margin: 0 20px;
+}
+
+#name {
+    font-family: Lato, sans-serif;
+    color: var(--white);
+    font-size: 2em;
 }
 
 #social-media {
@@ -138,14 +178,14 @@ img, embed, object, video {
 
 .fa-facebook {
     background: #3B5998;
-    color: white;
+    color: var(--white);
 }
 
 /* Twitter */
 
 .fa-twitter {
     background: #55ACEE;
-    color: white;
+    color: var(--white);
 }
 
 .fa {
@@ -189,7 +229,7 @@ img, embed, object, video {
     animation-name: fallIn;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 714px) {
     #navbar {
         flex-wrap: wrap;
         flex-direction: column;
@@ -205,10 +245,13 @@ img, embed, object, video {
 
 section:not(#timeline):not(#portfolio) {
     display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 section {
-    padding-top: 75px;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
 main {
@@ -224,13 +267,16 @@ main {
     text-align: center;
     background: var(--gunmetal);
     color: var(--white);
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 75%, 0 100%, 0 0, 24% 100%, 3% 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 75%, 0 100%, 0 0, 24% 100%, 3% 0);
 }
 
 #hero h1 {
     font-size: calc(40px + (80 - 40) * ((100vw - 300px) / (1600 - 300)));
     font-family: Lato, sans-serif;
     font-weight: 600;
-    margin-bottom: .33em;
+    margin: 0;
+    background: transparent;
 }
 
 #hero h1 em {
@@ -238,14 +284,29 @@ main {
     font-style: normal;
 }
 
+#hero div {
+    margin-top: 100px;
+}
+
+#hero div a {
+    background: linear-gradient(var(--sunset-orange), #ff4949);
+    font-family: Lato, sans-serif;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 2em;
+}
+
 /*Animation only looks correct on larger screen*/
+
 @media only screen and (min-width: 1080px) {
-    #hero h1 {
+    #hero h1:first-of-type {
         overflow: hidden;
         /* Ensures the content is not revealed until the animation */
         white-space: nowrap;
         /* Keeps the content on a single line */
-        margin: 0 auto .33em auto;
+        margin: 0 auto 0 auto;
         /* Gives that scrolling effect as the typing happens */
         letter-spacing: .1em;
         /* Adjust as needed */
@@ -260,8 +321,18 @@ main {
             width: 100%
         }
     }
-
-    #hero h1 em:nth-child(2), #hero h1 i:nth-child(3) {
+    #hero h1 em:nth-child(1), #hero h1 i:nth-child(2) {
+        -webkit-animation: fadein 2.5s;
+        /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 2.5s;
+        /* Firefox < 16 */
+        -ms-animation: fadein 2.5s;
+        /* Internet Explorer */
+        -o-animation: fadein 2.5s;
+        /* Opera < 12.1 */
+        animation: fadein 2.5s;
+    }
+    #hero h1 em:nth-child(3), #hero h1 i:nth-child(4) {
         -webkit-animation: fadein 3.5s;
         /* Safari, Chrome and Opera > 12.1 */
         -moz-animation: fadein 3.5s;
@@ -272,38 +343,27 @@ main {
         /* Opera < 12.1 */
         animation: fadein 3.5s;
     }
-    #hero h1 em:nth-child(4), #hero h1 i:nth-child(5) {
-        -webkit-animation: fadein 5s;
+    #hero h1 em:nth-child(5), #hero h1 i:nth-child(6) {
+        -webkit-animation: fadein 4.5s;
         /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 5s;
+        -moz-animation: fadein 4.5s;
         /* Firefox < 16 */
-        -ms-animation: fadein 5s;
+        -ms-animation: fadein 4.5s;
         /* Internet Explorer */
-        -o-animation: fadein 5s;
+        -o-animation: fadein 4.5s;
         /* Opera < 12.1 */
-        animation: fadein 5s;
-    }
-    #hero h1 em:nth-child(6), #hero h1 i:nth-child(7) {
-        -webkit-animation: fadein 6s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 6s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 6s;
-        /* Internet Explorer */
-        -o-animation: fadein 6s;
-        /* Opera < 12.1 */
-        animation: fadein 6s;
+        animation: fadein 4.5s;
     }
     #hero p {
-        -webkit-animation: fadein 7s;
+        -webkit-animation: fadein 5.5s;
         /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 7s;
+        -moz-animation: fadein 5.5s;
         /* Firefox < 16 */
-        -ms-animation: fadein 7s;
+        -ms-animation: fadein 5.5s;
         /* Internet Explorer */
-        -o-animation: fadein 7s;
+        -o-animation: fadein 5.5s;
         /* Opera < 12.1 */
-        animation: fadein 7s;
+        animation: fadein 5.5s;
     }
     @keyframes fadein {
         0% {
@@ -348,9 +408,7 @@ main {
 #hero h1 p {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin: 40px 40px 0 40px;
 }
 
 /* Smartphones (portrait) ----------- */
@@ -384,7 +442,6 @@ main {
 /*SKILLS*/
 
 #skills {
-    border: solid 6px var(--gunmetal);
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -432,6 +489,9 @@ main {
 
 #timeline {
     min-height: 100vh;
+    background: var(--gunmetal);
+    -webkit-clip-path: polygon(0 12%, 100% 0%, 100% 86%, 0% 100%);
+    clip-path: polygon(0 12%, 100% 0%, 100% 86%, 0% 100%);
 }
 
 #timeline h2 {
@@ -439,19 +499,13 @@ main {
 }
 
 #timeline h3, #timeline p {
-    color: white;
-}
-
-body {
-    background-color: white;
-    font-family: Helvetica, sans-serif;
+    color: var(--gunmetal);
 }
 
 /* The actual timeline (the vertical ruler) */
 
 .timeline {
     position: relative;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -461,7 +515,7 @@ body {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #2C363F;
+    background-color: var(--white);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -485,8 +539,8 @@ body {
     width: 25px;
     height: 25px;
     right: -17px;
-    background-color: white;
-    border: 4px solid #FF5A5A;
+    background-color: var(--white);
+    border: 4px solid var(--sunset-orange);
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -514,9 +568,9 @@ body {
     width: 0;
     z-index: 1;
     right: 30px;
-    border: medium solid white;
+    border: medium solid var(--white);
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #2C363F;
+    border-color: transparent transparent transparent var(--white);
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -529,9 +583,9 @@ body {
     width: 0;
     z-index: 1;
     left: 30px;
-    border: medium solid white;
+    border: medium solid var(--white);
     border-width: 10px 10px 10px 0;
-    border-color: transparent #2C363F transparent transparent;
+    border-color: transparent var(--white) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -544,7 +598,7 @@ body {
 
 .content {
     padding: 20px 30px;
-    background-color: #2C363F;
+    background-color: var(--white);
     position: relative;
     border-radius: 6px;
 }
@@ -567,7 +621,7 @@ body {
         left: 60px;
         border: medium solid white;
         border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
+        border-color: transparent var(--white) transparent transparent;
     }
     /* Make sure all circles are at the same spot */
     .left::after, .right::after {
@@ -584,28 +638,73 @@ body {
 #portfolio {
     display: grid;
     grid-gap: 80px;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: repeat(3, auto);
     min-height: 100vh;
-    background: var(--gunmetal);
-    padding-left: 10%;
-    padding-right: 10%;
+    background: var(--white);
+    padding: 75px 3vw 75px 3vw;
 }
 
-#portfolio div {
+#portfolio article {
     display: flex;
+    justify-self: center;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: var(--gunmetal);
     height: 400px;
+    width: 100%;
     max-width: 80vw;
+    -webkit-clip-path: polygon(73% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
+clip-path: polygon(73% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
 }
 
 #portfolio h2 {
-    color: var(--gunmetal);
+    color: var(--sunset-orange);
+    text-align: center;
+    margin: 0 20%;
 }
 
+#portfolio h2 {
+    align-self: center;
+}
 
+#portfolio div {
+    position: absolute;
+}
+
+#portfolio-content-1:target .modal-content {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+}
+
+#portfolio .modal-content {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 30px;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    width: 500px;
+}
+
+#portfolio .modal-close {
+    align-self: flex-end;
+}
+
+#portfolio .fa-angle-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+#portfolio .fa-angle-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
 
 #contact iframe document html body {
     background: var(--gunmetal);

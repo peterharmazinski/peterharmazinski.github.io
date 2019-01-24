@@ -20,21 +20,24 @@
     <meta name="keywords" content="web developer,web design,portfolio">
     <link href="img/favicon.png" rel="icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Lato" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Lato|UnifrakturMaguntia" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
     <link href="css/index.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
-    <header id="intro">
+    <header>
         <nav id="navbar">
             <div id="nav-left">
-                <img id="logo" src="img/logo3.png" alt="Logo for page. A code icon with text: Peter Harmazinski, Web Developer and Designer">
+                <a href="#">
+                    <span id="logo">&lt;/&gt;</span>
+                    <span id="name">Peter Harmazinski</span>
+                </a>
             </div>
 
             <div id="nav-right">
-                <a id="intro-nav" href="#intro">INTRO</a>
+                <a id="intro-nav" href="#">INTRO</a>
                 <a id="skills-nav" href="#skills">SKILLS</a>
                 <a id="timeline-nav" href="#timeline">TIMELINE</a>
                 <a id="portfolio-nav" href="#portfolio">PORTFOLIO</a>
@@ -46,11 +49,15 @@
     </header>
     <main>
         <section id="hero">
-            <h1>Let's create something <br><em>beautiful</em><i>. </i><em>accessible</em><i>. </i><em>efficient</em><i>.</i></p>
+            <h1>Let's create something</h1><br>
+            <h1><em>beautiful</em><i>. </i><em>accessible</em><i>. </i><em>efficient</em><i>.</i></p>
             </h1>
             <p>I'm a full-stack developer with a focus on front-end development. I'm passionate about creating
-                data-driven and
-                seamless user experiences.</p>
+                enjoyable, data-driven user experiences.
+            </p>
+            <div>
+                <a href="#portfolio">View My Work</a>
+            </div>
         </section>
 
         <section id="skills">
@@ -131,70 +138,245 @@
 
         <section id="timeline" class="timeline">
             <h1 class="hidden">Timeline</h1>
-            <div class="timeline-container right">
-                <div class="content">
-                    <h2>2018</h2>
-                    <h3>JPMorgan Chase</h3>
-                    <p>Designed and implemented a single-page, data-driven application, which hosts multiple
-                        dashboards.</p>
-                    <p>Trained new Web developers to use Git, maintain codebase, and design and implement enhancements.</p>
-                    <p>Ensured data integrity by cleaning the data, reorganizing tables to be more efficient, and
-                        implementing data monitoring.</p>
+            <article>
+                <div class="timeline-container right">
+                    <div class="content">
+                        <h2>2018</h2>
+                        <h3>JPMorgan Chase</h3>
+                        <p>Designed and implemented a single-page, data-driven application, which hosts multiple
+                            dashboards.</p>
+                        <p>Trained new Web developers to use Git, maintain codebase, and design and implement
+                            enhancements.</p>
+                        <p>Ensured data integrity by cleaning the data, reorganizing tables to be more efficient, and
+                            implementing data monitoring.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-container left">
-                <div class="content">
-                    <h2>2017</h2>
-                    <h3>JPMorgan Chase</h3>
-                    <p>Migrated website backend from Oracle to Cassandra by updating data models and code to improve
-                        performance by 50%.</p>
-                    <p>Analyzed and compared Cassandra/Oracle performances and created a Splunk dashboard to visualize
-                        data for leadership.</p>
-                    <p>Created admin pages with more attractive user interfaces and easier to use designs,
-                        resulting in 25% less steps required to complete tasks.
-                    </p>
+            </article>
+            <article>
+                <div class="timeline-container left">
+                    <div class="content">
+                        <h2>2017</h2>
+                        <h3>JPMorgan Chase</h3>
+                        <p>Migrated website backend from Oracle to Cassandra by updating data models and code to
+                            improve
+                            performance by 50%.</p>
+                        <p>Analyzed and compared Cassandra/Oracle performances and created a Splunk dashboard to
+                            visualize
+                            data for leadership.</p>
+                        <p>Created admin pages with more attractive user interfaces and easier to use designs,
+                            resulting in 25% less steps required to complete tasks.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-container right">
-                <div class="content">
-                    <h2>2016</h2>
-                    <h3>JPMorgan Chase</h3>
-                    <p>
-                        Designed and implemented a Web dashboard, which automatically updates UAT
-                        Scorecard data for each Coordinated Release, resulting in 30+ hours saved per year.
-                    </p>
-                    <p>
-                        Automated UAT report generation by creating a form for managers to connect to HP Lifecycle
-                        Application Management and display data via Excel VBA, resulting in 240+ hours saved per year.
-                    </p>
+            </article>
+            <article>
+                <div class="timeline-container right">
+                    <div class="content">
+                        <h2>2016</h2>
+                        <h3>JPMorgan Chase</h3>
+                        <p>
+                            Designed and implemented a Web dashboard, which automatically updates UAT
+                            Scorecard data for each Coordinated Release, resulting in 30+ hours saved per year.
+                        </p>
+                        <p>
+                            Automated UAT report generation by creating a form for managers to connect to HP Lifecycle
+                            Application Management and display data via Excel VBA, resulting in 240+ hours saved per
+                            year.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-container left">
-                <div class="content">
-                    <h2>2015</h2>
-                    <h3>JPMorgan Chase</h3>
-                    <p>
-                        Reviewed and cleaned existing report generation code, resulting in 41% code length reduction,
-                        90% time savings, improved use of variables, and reusable functions.
-                    </p>
-                    <p>Managed software pilots by reviewing, triaging, and resolving issues,
-                        conducting global conference calls with business managers, and communicating via email, chat,
-                        and telepresence.</p>
+            </article>
+            <article>
+                <div class="timeline-container left">
+                    <div class="content">
+                        <h2>2015</h2>
+                        <h3>JPMorgan Chase</h3>
+                        <p>
+                            Reviewed and cleaned existing report generation code, resulting in 41% code length
+                            reduction,
+                            90% time savings, improved use of variables, and reusable functions.
+                        </p>
+                        <p>Managed software pilots by reviewing, triaging, and resolving issues,
+                            conducting global conference calls with business managers, and communicating via email,
+                            chat,
+                            and telepresence.</p>
+                    </div>
                 </div>
-            </div>
+            </article>
         </section>
 
         <section id="portfolio">
             <h1 class="hidden">Portfolio</h1>
-            <div><h2>Art Gallery</h2></div>
-            <div><h2>Kids Math</h2></div>
-            <div><h2>Beach Resort</h2></div>
-            <div><h2>Dashboard Center</h2></div>
-            <div><h2>JPMorgan Markets</h2></div>
-            <div><h2>Capacity Dashboard</h2></div>
+            <article>
+                <h2>Mentorship Site</h2>
+                <div id="portfolio-content-1" class="modal">
+                    <div class="modal-content hidden">
+                        <a class="modal-close" href="#modal-close">X</a>
+                        <i class="fas fa-angle-left"></i>
+                        <h3>The Problem</h3>
+                        <h3>The Challenges</h3>
+                        <h3>The Solution</h3>
+                        <h3>The Lessons Learned</h3>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h2>UAT Dashboard</h2>
+                <div id="portfolio-content-1" class="modal">
+                    <div class="modal-content hidden">
+                        <a class="modal-close" href="#modal-close">X</a>
+                        <i class="fas fa-angle-left"></i>
+                        <h3>The Problem</h3>
+                        <h3>The Challenges</h3>
+                        <h3>The Solution</h3>
+                        <h3>The Lessons Learned</h3>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h2>Skill Assessments Dashboard</h2>
+                <div id="portfolio-content-2" class="modal">
+                    <div class="modal-content hidden">
+                        <a class="modal-close" href="#modal-close">X</a>
+                        <i class="fas fa-angle-left"></i>
+                        <h3>The Problem</h3>
+                        <h3>The Challenges</h3>
+                        <h3>The Solution</h3>
+                        <h3>The Lessons Learned</h3>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h2>Quality Reviews Dashboard</h2>
+                <div id="portfolio-content-3" class="modal">
+                    <div class="modal-content hidden">
+                        <a class="modal-close" href="#modal-close">X</a>
+                        <i class="fas fa-angle-left"></i>
+                        <h3>The Problem</h3>
+                        <h3>The Challenges</h3>
+                        <h3>The Solution</h3>
+                        <h3>The Lessons Learned</h3>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h2>Dashboard Center</h2>
+                <div id="portfolio-content-4" class="modal">
+                    <div class="modal-content hidden">
+                        <a class="modal-close" href="#modal-close">X</a>
+                        <i class="fas fa-angle-left"></i>
+                        <h3>The Problem</h3>
+                        <h3>The Challenges</h3>
+                        <h3>The Solution</h3>
+                        <h3>The Lessons Learned</h3>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h2>JPMorgan Markets Admin API</h2>
+                <div id="portfolio-content-5" class="modal">
+                    <div class="modal-content hidden">
+                        <a class="modal-close" href="#modal-close">X</a>
+                        <i class="fas fa-angle-left"></i>
+                        <h3>The Problem</h3>
+                        <h3>The Challenges</h3>
+                        <h3>The Solution</h3>
+                        <h3>The Lessons Learned</h3>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h2>JPMorgan Markets Admin Pages</h2>
+                <div id="portfolio-content-6" class="modal">
+                    <div class="modal-content hidden">
+                        <a class="modal-close" href="#modal-close">X</a>
+                        <i class="fas fa-angle-left"></i>
+                        <h3>The Problem</h3>
+                        <h3>The Challenges</h3>
+                        <h3>The Solution</h3>
+                        <h3>The Lessons Learned</h3>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h2>JPMorgan Markets Cassandra Migration</h2>
+                <div id="portfolio-content-7" class="modal">
+                    <div class="modal-content hidden">
+                        <a class="modal-close" href="#modal-close">X</a>
+                        <i class="fas fa-angle-left"></i>
+                        <h3>The Problem</h3>
+                        <h3>The Challenges</h3>
+                        <h3>The Solution</h3>
+                        <h3>The Lessons Learned</h3>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h2>Scorecard Dashboard</h2>
+                <div id="portfolio-content-8" class="modal">
+                    <div class="modal-content hidden">
+                        <a class="modal-close" href="#modal-close">X</a>
+                        <i class="fas fa-angle-left"></i>
+                        <h3>The Problem</h3>
+                        <h3>The Challenges</h3>
+                        <h3>The Solution</h3>
+                        <h3>The Lessons Learned</h3>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h2>Self Service UAT Report Automation</h2>
+                <div id="portfolio-content-9" class="modal">
+                    <div class="modal-content hidden">
+                        <a class="modal-close" href="#modal-close">X</a>
+                        <i class="fas fa-angle-left"></i>
+                        <h3>The Problem</h3>
+                        <p>Creating UAT reports was a time consuming and manual process. The manual process consisted
+                            of creating and update SQL and VBA within the HP ALM for each of the 11 test disciplines at
+                            least monthly. Depending on the complexity of the event, time spent on generating the
+                            report was between 4-8 hours.</p>
+                        <h3>The Challenges</h3>
+                        <p></p>
+                        <h3>The Solution</h3>
+                        <p>I Created an Excel-based form and converted the SQL to VBA using HP ALM’s OTA API to
+                            retrieve data.</p>
+                        <h3>The Lessons Learned</h3>
+                        <p>Maintaining code that was distributed to many users proved to be a difficult process. Users
+                            had a variety of environmental issues and did not use the updated code reliably.</p>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
     <script src="js/index.js"></script>
 </body>
+
+<script>
+    window.onscroll = function () {
+        var nav = document.getElementById('nav');
+        if (window.pageYOffset > 100) {
+            document.querySelector('#navbar').style.background = 'var(--gunmetal)';
+        } else {
+            document.querySelector('#navbar').style.background = 'transparent';
+        }
+    }
+
+    document.querySelectorAll("#portfolio article").forEach(project => {
+        project.onclick = function () {
+            const modal = project.querySelector('.modal-content');
+            modal.classList.toggle('hidden');
+        }
+    });
+</script>
 
 </html>
