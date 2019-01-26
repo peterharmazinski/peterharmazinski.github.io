@@ -245,8 +245,8 @@ img, embed, object, video {
 
 section:not(#timeline):not(#portfolio) {
     display: flex;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 section {
@@ -272,11 +272,15 @@ main {
 }
 
 #hero h1 {
-    font-size: calc(40px + (80 - 40) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(25px + (80 - 25) * ((100vw - 300px) / (1600 - 300)));
     font-family: Lato, sans-serif;
     font-weight: 600;
     margin: 0;
     background: transparent;
+}
+
+#hero h1:nth-child(2) {
+    padding: 0 50px;
 }
 
 #hero h1 em {
@@ -284,8 +288,12 @@ main {
     font-style: normal;
 }
 
+#hero p {
+    margin: 0;
+}
+
 #hero div {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 #hero div a {
