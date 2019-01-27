@@ -267,8 +267,8 @@ main {
     text-align: center;
     background: var(--gunmetal);
     color: var(--white);
-    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 75%, 0 100%, 0 0, 24% 100%, 3% 0);
-    clip-path: polygon(50% 0%, 100% 0, 100% 75%, 0 100%, 0 0, 24% 100%, 3% 0);
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 75%, 0 100%, 0 0, 20% 100%, 3% 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 75%, 0 100%, 0 0, 20% 100%, 3% 0);
 }
 
 #hero h1 {
@@ -497,8 +497,8 @@ main {
 #timeline {
     min-height: 100vh;
     background: var(--gunmetal);
-    -webkit-clip-path: polygon(0 12%, 100% 0%, 100% 86%, 0% 100%);
-    clip-path: polygon(0 12%, 100% 0%, 100% 86%, 0% 100%);
+    -webkit-clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+    clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
 }
 
 #timeline h2 {
