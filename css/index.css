@@ -141,13 +141,14 @@ img, embed, object, video {
     font-family: 'UnifrakturMaguntia', cursive;
     color: var(--sunset-orange);
     font-size: 2.5em;
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 #name {
     font-family: Lato, sans-serif;
     color: var(--white);
     font-size: 2em;
+    margin-right: 10px;
 }
 
 #social-media {
@@ -267,8 +268,8 @@ main {
     text-align: center;
     background: var(--gunmetal);
     color: var(--white);
-    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 75%, 0 100%, 0 0, 20% 100%, 3% 0);
-    clip-path: polygon(50% 0%, 100% 0, 100% 75%, 0 100%, 0 0, 20% 100%, 3% 0);
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 75%, 0 100%, 0 0, 20% 100%, 2% 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 75%, 0 100%, 0 0, 20% 100%, 2% 0);
 }
 
 #hero h1 {
